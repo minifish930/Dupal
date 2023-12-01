@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+}
+
+/*去掉a标签的下划线*/
+a {
+    text-decoration: none;
+    padding: 3px;
+    color: rgb(112, 112, 112);
+
+}
+
+a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* 主要布局 */
+
+/* 左侧 */
+.left {
+    display: inline-flex;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    width: 160px;
+    float: left;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+
+
+/* 右侧 */
+.right {
+    display: inline-flex;
+    float: left;
+    margin-left: 160px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bo {
+    padding: 2px;
+}
+
+.tag {
+    vertical-align: middle;
+    text-align: center;
+    padding: 6px;
+    padding-bottom: 8px;
+}
+
+span {
+    font-family: verdana;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.tagpic {
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.links {
+    text-align: center;
+    border: 2px solid #96c2f1;
+    background: #f1f1f1;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 6px;
+    width: 360px;
+    max-height: 500px;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width:550px) {
+    .links {
+        text-align: center;
+        border: 2px solid #96c2f1;
+        background: #f1f1f1;
+        border-radius: 3px;
+        padding: 3px;
+        margin: 6px;
+        width: auto;
+        max-height: none;
+    }
+}
+
+.links::-webkit-scrollbar-track {
+    border-radius: 5%;
+    background-color: #f1f1f1;
+}
+
+.links::-webkit-scrollbar {
+    width: 5px;
+}
+
+.links::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.links a {
+    text-decoration: none;
+    display: block;
+}
+
+@media screen and (max-width:550px) {
+    .links a {
+        text-decoration: none;
+        display: block;
+    }
+}
+
+
+/* 已访问的链接 */
+.links a:visited {
+    color: #212121;
+}
