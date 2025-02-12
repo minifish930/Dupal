@@ -4,7 +4,7 @@ const loading = document.getElementById('loading');
 let page = 1;
 let limit = calculateImageLimit(); // 动态计算初始Limit值
 let loadingFlag = false;
-const totalImages = 5; // 设定总图片数量
+const totalImages = 10; // 设定总图片数量
 
 // 计算窗口可以显示的图片数量，并加上5
 function calculateImageLimit() {
